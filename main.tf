@@ -30,7 +30,7 @@ resource "aws_instance" "my_server" {
    
    security_groups = [aws_security_group.allow_http.name]
    
-   userstuff = file("${path.module}/wp_install.sh")
+   user_data = file("${path.module}/wp_install.sh")
 
    # Add tags to the EC2 instance for identification
    tags = {
