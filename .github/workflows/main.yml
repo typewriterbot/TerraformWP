@@ -57,8 +57,8 @@ jobs:
         run: terraform apply -auto-approve # Auto-approve flag skips manual confirmation
 
 	# Step 7: Apply delay w/ destroy
-	- name: Delay
-	run: sleep 120 # in seconds so 2 minutes?
-	- name: Terraform Destroy
-	run: terraform destroy
+      - name: sleep
+        run: sleep 120 # in seconds so 2 minutes?
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
         
